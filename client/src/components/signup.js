@@ -1,5 +1,7 @@
 'use strict';
 var React = require('react-native');
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
 var t = require('tcomb-form-native');
 var { 
   AppRegistry,
@@ -79,68 +81,68 @@ export default class Signup extends Component {
 
   render() {
     return (
-      <View style={{backgroundColor: '#f7f6f3'}}>
-      <View style={styles.topSpace}>
-      </View>
+      <View style={{height: windowSize.height, backgroundColor: '#f7f6f3'}}>
+        <View style={styles.topSpace}>
+        </View>
 
-      <View style={styles.buttonContainer}>
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[0] && styles.button2]} onPress={this.traitsClicked.bind(this, 1)} underlayColor={'black'} onPressIn={this.togglePressIn} onPressOut={this.togglePressIn}>
-        <Text style={styles.buttonText}>Good Food</Text>
-      </TouchableHighlight>
+        <View style={styles.buttonContainer}>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[0] && styles.button2]} onPress={this.traitsClicked.bind(this, 1)} underlayColor={'black'} onPressIn={this.togglePressIn} onPressOut={this.togglePressIn}>
+          <Text style={styles.buttonText}>Good Food</Text>
+        </TouchableHighlight>
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[1] && styles.button2]} onPress={this.traitsClicked.bind(this, 2)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Good Drinks</Text>
-      </TouchableHighlight>        
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[1] && styles.button2]} onPress={this.traitsClicked.bind(this, 2)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Good Drinks</Text>
+        </TouchableHighlight>        
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[2] && styles.button2]} onPress={this.traitsClicked.bind(this, 3)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Good Deal</Text>
-      </TouchableHighlight>
-      </View>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[2] && styles.button2]} onPress={this.traitsClicked.bind(this, 3)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Good Deal</Text>
+        </TouchableHighlight>
+        </View>
 
-      <View style={styles.buttonContainer}>
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[3] && styles.button2]} onPress={this.traitsClicked.bind(this, 4)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Not Noisy</Text>
-      </TouchableHighlight>
+        <View style={styles.buttonContainer}>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[3] && styles.button2]} onPress={this.traitsClicked.bind(this, 4)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Not Noisy</Text>
+        </TouchableHighlight>
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[4] && styles.button2]} onPress={this.traitsClicked.bind(this, 5)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Not Crowded</Text>
-      </TouchableHighlight>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[4] && styles.button2]} onPress={this.traitsClicked.bind(this, 5)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Not Crowded</Text>
+        </TouchableHighlight>
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[5] && styles.button2]} onPress={this.traitsClicked.bind(this, 6)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>No Wait</Text>
-      </TouchableHighlight> 
-      </View>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[5] && styles.button2]} onPress={this.traitsClicked.bind(this, 6)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>No Wait</Text>
+        </TouchableHighlight> 
+        </View>
 
-      <View style={styles.buttonContainer}>
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[6] && styles.button2]} onPress={this.traitsClicked.bind(this, 7)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Good Service</Text>
-      </TouchableHighlight> 
+        <View style={styles.buttonContainer}>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[6] && styles.button2]} onPress={this.traitsClicked.bind(this, 7)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Good Service</Text>
+        </TouchableHighlight> 
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[7] && styles.button2]} onPress={this.traitsClicked.bind(this, 8)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Upscale</Text>
-      </TouchableHighlight> 
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[7] && styles.button2]} onPress={this.traitsClicked.bind(this, 8)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Upscale</Text>
+        </TouchableHighlight> 
 
-      <TouchableHighlight style={[styles.button1, this.state.buttonPress[8] && styles.button2]} onPress={this.traitsClicked.bind(this, 9)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Veggie Friendly</Text>
-      </TouchableHighlight> 
-      </View>
+        <TouchableHighlight style={[styles.button1, this.state.buttonPress[8] && styles.button2]} onPress={this.traitsClicked.bind(this, 9)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Veggie Friendly</Text>
+        </TouchableHighlight> 
+        </View>
 
-      <View style={styles.container}>
-        <Form
-          ref="form"
-          type={User}
-          options={options}
-        />
-      </View> 
+        <View style={styles.container}>
+          <Form
+            ref="form"
+            type={User}
+            options={options}
+          />
+        </View> 
 
-      <View style={styles.twoButtons}>
-      <TouchableHighlight style={styles.button1} onPress={this.backToSignin.bind(this)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Back to Login</Text>
-      </TouchableHighlight>
-      <TouchableHighlight style={styles.button1} onPress={this.onPress.bind(this)} underlayColor='#99d9f4'>
-        <Text style={styles.buttonText}>Signup</Text>
-      </TouchableHighlight>
-      </View>
+        <View style={styles.twoButtons}>
+        <TouchableHighlight style={styles.button1} onPress={this.backToSignin.bind(this)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Back to Login</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.button1} onPress={this.onPress.bind(this)} underlayColor='#99d9f4'>
+          <Text style={styles.buttonText}>Signup</Text>
+        </TouchableHighlight>
+        </View>
       </View>
     )
   }
